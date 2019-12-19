@@ -7,5 +7,8 @@ public class SiparisOlusturView extends HorizontalLayout {
 
     FormLayout mainLayout;
 
+    public SiparisOlusturView() {
+
+    }
 }
 
