@@ -1,4 +1,10 @@
 package com.vaadin.ui.views;
 
-public class MasaView {
+import com.vaadin.ui.GridLayout;
+
+
+public class MasaView extends GridLayout {
+
+
+
 }
