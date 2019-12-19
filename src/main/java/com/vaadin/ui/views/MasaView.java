@@ -1,8 +1,11 @@
 package com.vaadin.ui.views;
 
 import com.vaadin.domain.Masa;
+import com.vaadin.event.LayoutEvents;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.Notification;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.components.LayoutChildComponent;
 
 import java.util.ArrayList;
@@ -13,9 +16,10 @@ public class MasaView extends GridLayout {
 
     private GridLayout mainGridLayout;
     private List<Masa> masaList = new ArrayList<>();
+    private TextField idField;
 
-    public MasaView() {
-
+    public MasaView(TextField idField) {
+        this.idField = idField;
         mainGridLayout = new GridLayout();
         mainGridLayout.addStyleName("Masa Düzeni");
         mainGridLayout.setSizeFull();
@@ -39,13 +43,20 @@ public class MasaView extends GridLayout {
                 mainGridLayout.addComponent(child);
                 mainGridLayout.setRowExpandRatio(row, 0.0f);
                 mainGridLayout.setColumnExpandRatio(col, 0.0f);
-                count++;
 
                 Masa masa = new Masa();
                 masa.setMasaNo(count);
                 masa.setDolu(false);
                 masaList.add(masa);
+                count++;
 
+                child.addLayoutClickListener(new LayoutEvents.LayoutClickListener() {
+                    @Override
+                    public void layoutClick(LayoutEvents.LayoutClickEvent layoutClickEvent) {
+                        Notification.show(("Masa "));
+                        idField.setValue(label.getValue());
+                    }
+                });
             }
         }
     }
