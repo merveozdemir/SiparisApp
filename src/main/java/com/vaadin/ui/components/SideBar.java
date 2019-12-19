@@ -29,7 +29,8 @@ public class SideBar extends VerticalLayout {
         siparisOlusturButton.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-
+                    SiparisOlusturView siparisOlusturView= new SiparisOlusturView();
+                    content.setContent(siparisOlusturView);
             }
         });
         addComponent(siparisOlusturButton);
@@ -39,7 +40,7 @@ public class SideBar extends VerticalLayout {
         siparisiOdeButton.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                SiparisOlusturView siparisOlusturView =new SiparisOlusturView();
+
             }
         });
         addComponent(siparisiOdeButton);

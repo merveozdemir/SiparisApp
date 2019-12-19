@@ -9,6 +9,11 @@ public class Yemek {
         this.fiyat = fiyat;
     }
 
+    @Override
+    public String toString() {
+        return adi;
+    }
+
     public String getAdi() {
         return adi;
     }
