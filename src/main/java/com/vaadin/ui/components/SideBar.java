@@ -4,6 +4,7 @@ import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.views.MasaView;
+import com.vaadin.ui.views.SiparisOlusturView;
 
 public class SideBar extends VerticalLayout {
 
@@ -28,7 +29,7 @@ public class SideBar extends VerticalLayout {
         siparisOlusturButton.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                    MasaView masaView = new MasaView();
+
             }
         });
         addComponent(siparisOlusturButton);
@@ -38,7 +39,7 @@ public class SideBar extends VerticalLayout {
         siparisiOdeButton.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-
+                SiparisOlusturView siparisOlusturView =new SiparisOlusturView();
             }
         });
         addComponent(siparisiOdeButton);
