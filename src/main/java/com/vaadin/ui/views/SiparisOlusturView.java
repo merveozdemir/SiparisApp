@@ -67,8 +67,6 @@ public class SiparisOlusturView extends HorizontalLayout {
             }
         });
         formLayout.addComponent(saveButton);
-
-
     }
 }
 
